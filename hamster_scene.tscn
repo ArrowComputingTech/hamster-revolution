@@ -1,5 +1,15 @@
 [gd_scene format=3 uid="uid://bodf3psuhdfp5"]
 
-[node name="HamsterScene" type="Node2D" unique_id=236178225]
+[ext_resource type="Texture2D" uid="uid://d0dq01wt6b4x4" path="res://assets/hamster_1.png" id="1_w21s2"]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=119515586]
+[sub_resource type="CircleShape2D" id="CircleShape2D_3iv66"]
+radius = 204.02206
+
+[node name="Hamster" type="CharacterBody2D" unique_id=1510492448]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=22476507]
+texture = ExtResource("1_w21s2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=503996524]
+position = Vector2(8, 27)
+shape = SubResource("CircleShape2D_3iv66")
