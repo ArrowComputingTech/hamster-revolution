@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bodf3psuhdfp5"]
+
+[node name="HamsterScene" type="Node2D" unique_id=236178225]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=119515586]
