@@ -1,0 +1,29 @@
+Player:
+- Hamster
+- Multiple hamsters?
+
+Enemy:
+- Bad kid owner (squeezed us too many times, only 5 yo)
+
+Win:
+- knock as many things down as possible
+    - counter
+    - timer (10 secs?)
+
+Top Down game?
+Random items? (Items themselves and locations randomize every game)
+Random rooms? (bedroom/living room/kitche)
+
+Items:
+- Video game system/TV
+- comic books
+- action figures
+- lamp
+- chair
+- statue of liberty
+- bicycle
+- rc car
+- drumset
+- guitar
+- rubik's cube
+- play scene (batman/jurassic park)
