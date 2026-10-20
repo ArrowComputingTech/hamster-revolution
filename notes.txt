@@ -7,8 +7,8 @@ Enemy:
 
 Win:
 - knock as many things down as possible
-    - counter
-    - timer (10 secs?)
+	- counter
+	- timer (10 secs?)
 
 Top Down game?
 Random items? (Items themselves and locations randomize every game)
