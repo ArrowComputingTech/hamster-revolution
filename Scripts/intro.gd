@@ -3,6 +3,8 @@ extends Control
 @export var video_player: VideoStreamPlayer
 
 func _ready() -> void:
+	# Comment this line to show the intro
+	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 	video_player.finished.connect(_on_video_finished)
 	video_player.play()
 
