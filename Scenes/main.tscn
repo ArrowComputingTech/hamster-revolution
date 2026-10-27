@@ -1,10 +1,27 @@
 [gd_scene format=3 uid="uid://bq6xfuope7qod"]
 
+[ext_resource type="Script" uid="uid://bhrlawj6voojl" path="res://Scripts/main.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://c2bdbigythsv5" path="res://Scenes/Bedroom.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://ckt7f87cohttr" path="res://Scenes/Player.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://dhhiheyqfp5af" path="res://Scenes/User_Interface.tscn" id="4_jjvhh"]
 
-[node name="Node2D" type="Node2D" unique_id=1725296416]
+[node name="Node2D" type="Node2D" unique_id=1725296416 node_paths=PackedStringArray("timer", "player", "popup")]
+script = ExtResource("1_8gbba")
+timer = NodePath("Timer")
+player = NodePath("Player")
+popup = NodePath("UserInterface")
 
 [node name="Bedroom" parent="." unique_id=1013182243 instance=ExtResource("1_bo1nx")]
 
 [node name="Player" parent="." unique_id=373225993 instance=ExtResource("2_8gbba")]
+
+[node name="Timer" type="Timer" parent="." unique_id=1603598860]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="UserInterface" parent="." unique_id=1882028947 instance=ExtResource("4_jjvhh")]
+size = Vector2i(500, 500)
+content_scale_mode = 2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
