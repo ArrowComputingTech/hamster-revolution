@@ -11,7 +11,17 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("Left", "Right", "Up", "Down")
-
+	
+	#animation for character
+	if Input.is_action_just_pressed("Left"):
+		$CollisionShape2D/AnimatedSprite2D.play("left")
+	if Input.is_action_just_pressed("Up"):
+		$CollisionShape2D/AnimatedSprite2D.play("up")	
+	if Input.is_action_just_pressed("Down"):
+		$CollisionShape2D/AnimatedSprite2D.play("down")	
+	if Input.is_action_just_pressed("Right"):
+		$CollisionShape2D/AnimatedSprite2D.play("right")	
+	
 	if direction != Vector2.ZERO:
 		# Accelerate ball to top speed
 		velocity = velocity.move_toward(direction * speed, acceleration * delta)
