@@ -1,10 +1,40 @@
 [gd_scene format=3 uid="uid://bq6xfuope7qod"]
 
+[ext_resource type="Script" uid="uid://bhrlawj6voojl" path="res://Scripts/main.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://c2bdbigythsv5" path="res://Scenes/Bedroom.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://ckt7f87cohttr" path="res://Scenes/Player.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://dhhiheyqfp5af" path="res://Scenes/User_Interface.tscn" id="4_jjvhh"]
+[ext_resource type="Texture2D" uid="uid://bgf7qqv4bdb2y" path="res://Art/cage.png" id="5_kry3j"]
 
-[node name="Node2D" type="Node2D" unique_id=1725296416]
+[node name="Node2D" type="Node2D" unique_id=1725296416 node_paths=PackedStringArray("timer", "player", "popup")]
+script = ExtResource("1_8gbba")
+timer = NodePath("Timer")
+player = NodePath("Player")
+popup = NodePath("UserInterface")
+
+[node name="Table" type="Polygon2D" parent="." unique_id=642791655]
+position = Vector2(1180.0001, 124)
+scale = Vector2(0.13722397, 0.16216215)
+color = Color(0.4509804, 0.18431373, 0.003921569, 0.47058824)
+polygon = PackedVector2Array(7.286133, -6.166626, -2565.15, 6.166687, -2587.0117, 604.3334, 21.861328, 548.8334)
 
 [node name="Bedroom" parent="." unique_id=1013182243 instance=ExtResource("1_bo1nx")]
 
 [node name="Player" parent="." unique_id=373225993 instance=ExtResource("2_8gbba")]
+
+[node name="Timer" type="Timer" parent="." unique_id=1603598860]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="UserInterface" parent="." unique_id=1882028947 instance=ExtResource("4_jjvhh")]
+size = Vector2i(500, 500)
+borderless = false
+content_scale_mode = 2
+
+[node name="Cage" type="Sprite2D" parent="." unique_id=440354809]
+position = Vector2(1135, 162)
+scale = Vector2(0.13722397, 0.16216215)
+texture = ExtResource("5_kry3j")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
