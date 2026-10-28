@@ -8,7 +8,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	timer.wait_time = timer_time
+	timer.start(timer_time)
 	popup.hide()
 	popup.get_node("NewGameButton").pressed.connect(_on_new_game_button_pressed)
 	popup.get_node("ExitButton").pressed.connect(_on_exit_button_pressed)

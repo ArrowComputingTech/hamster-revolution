@@ -26,8 +26,9 @@ polygon = PackedVector2Array(7.286133, -6.166626, -2565.15, 6.166687, -2587.0117
 
 [node name="Bedroom" parent="." unique_id=1013182243 instance=ExtResource("1_bo1nx")]
 
-[node name="Player" parent="." unique_id=373225993 node_paths=PackedStringArray("dinosaur") instance=ExtResource("2_8gbba")]
-dinosaur = NodePath("../Dinosaur")
+[node name="Player" parent="." unique_id=373225993 instance=ExtResource("2_8gbba")]
+z_index = 1
+position = Vector2(1103, 171)
 
 [node name="Timer" type="Timer" parent="." unique_id=1603598860]
 wait_time = 3.0
@@ -40,7 +41,7 @@ borderless = false
 content_scale_mode = 2
 
 [node name="Cage" type="Sprite2D" parent="." unique_id=440354809]
-position = Vector2(1135, 162)
+position = Vector2(1105, 169.00002)
 scale = Vector2(0.13722397, 0.16216215)
 texture = ExtResource("5_kry3j")
 

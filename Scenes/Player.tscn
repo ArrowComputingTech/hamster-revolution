@@ -261,27 +261,13 @@ speed = 400
 acceleration = 300
 friction = 200
 
-<<<<<<< HEAD
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1250620355]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1250620355]
 position = Vector2(2, 5)
 scale = Vector2(0.45, 0.45)
 shape = SubResource("CircleShape2D_3iv66")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D" unique_id=1168658883]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=1168658883]
 position = Vector2(-4.4444447, -11.111112)
 scale = Vector2(2.2222223, 2.2222223)
 sprite_frames = SubResource("SpriteFrames_3iv66")
 animation = &"up"
-=======
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=609248387]
-position = Vector2(552, 356)
-polygon = PackedVector2Array(0, -4, 26, -4, 26, 20, 0, 20)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=776865572]
-light_mask = 3
-visibility_layer = 3
-material = SubResource("CanvasItemMaterial_qbkls")
-position = Vector2(552, 352.18124)
-scale = Vector2(1, 1.139881)
-polygon = PackedVector2Array(26, 21, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 0)
->>>>>>> b19619cfa81446f7b050e6518c8b97f1a89424b8
