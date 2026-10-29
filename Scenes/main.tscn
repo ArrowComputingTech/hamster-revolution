@@ -1,11 +1,25 @@
 [gd_scene format=3 uid="uid://bq6xfuope7qod"]
 
-[ext_resource type="Script" uid="uid://bhrlawj6voojl" path="res://Scripts/main.gd" id="1_8gbba"]
-[ext_resource type="PackedScene" uid="uid://c2bdbigythsv5" path="res://Scenes/Bedroom.tscn" id="1_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://ckt7f87cohttr" path="res://Scenes/Player.tscn" id="2_8gbba"]
-[ext_resource type="PackedScene" uid="uid://bksfq7q3s0tq7" path="res://Scenes/Dinosaur.tscn" id="2_21xkr"]
-[ext_resource type="PackedScene" uid="uid://dhhiheyqfp5af" path="res://Scenes/User_Interface.tscn" id="4_jjvhh"]
+[ext_resource type="Script" uid="uid://bhrlawj6voojl" path="res://scripts/main.gd" id="1_8gbba"]
+[ext_resource type="PackedScene" uid="uid://c2bdbigythsv5" path="res://scenes/Bedroom.tscn" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://ckt7f87cohttr" path="res://scenes/Player.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://bksfq7q3s0tq7" path="res://scenes/Dinosaur.tscn" id="2_21xkr"]
+[ext_resource type="PackedScene" uid="uid://dhhiheyqfp5af" path="res://scenes/User_Interface.tscn" id="4_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://bgf7qqv4bdb2y" path="res://Art/cage.png" id="5_kry3j"]
+[ext_resource type="Texture2D" uid="uid://ba1t7hx8ehchv" path="res://assets/SmokeFX Lite SpriteSheet 4A-1.png" id="7_o6xl0"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tefeu"]
+particles_animation = true
+particles_anim_h_frames = 16
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3iv66"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+anim_speed_max = 1.0
+anim_offset_min = 0.26389998
+anim_offset_max = 0.5257
 
 [node name="Node2D" type="Node2D" unique_id=1725296416 node_paths=PackedStringArray("timer", "player", "popup", "dinosaur")]
 script = ExtResource("1_8gbba")
@@ -44,5 +58,11 @@ content_scale_mode = 2
 position = Vector2(1105, 169.00002)
 scale = Vector2(0.13722397, 0.16216215)
 texture = ExtResource("5_kry3j")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=384568980]
+material = SubResource("CanvasItemMaterial_tefeu")
+position = Vector2(520, 503)
+texture = ExtResource("7_o6xl0")
+process_material = SubResource("ParticleProcessMaterial_3iv66")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
