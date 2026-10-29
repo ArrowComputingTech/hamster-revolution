@@ -3,10 +3,8 @@ extends Control
 @export var video_player: VideoStreamPlayer
 
 func _ready() -> void:
-	# Comment this line to show the intro
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
-	video_player.finished.connect(_on_video_finished)
 	video_player.play()
+	video_player.finished.connect(_on_video_finished)
 
 func _on_video_finished() -> void:
 	# Hide the video so the black background shows for 1 second,
