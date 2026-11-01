@@ -1,18 +1,10 @@
 [gd_scene format=3 uid="uid://bq6xfuope7qod"]
 
-<<<<<<< HEAD
-[ext_resource type="Script" uid="uid://bhrlawj6voojl" path="res://scripts/main.gd" id="1_8gbba"]
-[ext_resource type="PackedScene" uid="uid://c2bdbigythsv5" path="res://scenes/Bedroom.tscn" id="1_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://ckt7f87cohttr" path="res://scenes/Player.tscn" id="2_8gbba"]
-[ext_resource type="PackedScene" uid="uid://bksfq7q3s0tq7" path="res://scenes/Dinosaur.tscn" id="2_21xkr"]
-[ext_resource type="PackedScene" uid="uid://dhhiheyqfp5af" path="res://scenes/User_Interface.tscn" id="4_jjvhh"]
-=======
 [ext_resource type="Script" uid="uid://bhrlawj6voojl" path="res://Scripts/main.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://c2bdbigythsv5" path="res://Scenes/Bedroom.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://ckt7f87cohttr" path="res://Scenes/Player.tscn" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://5asnhac8ad5k" path="res://Scenes/Dinosaur.tscn" id="2_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dhhiheyqfp5af" path="res://Scenes/User_Interface.tscn" id="4_jjvhh"]
->>>>>>> e583660463864a4d7d698700dc06066e31186ff5
 [ext_resource type="Texture2D" uid="uid://bgf7qqv4bdb2y" path="res://Art/cage.png" id="5_kry3j"]
 [ext_resource type="Texture2D" uid="uid://ba1t7hx8ehchv" path="res://assets/SmokeFX Lite SpriteSheet 4A-1.png" id="7_o6xl0"]
 
