@@ -1,16 +1,18 @@
-[gd_scene format=3 uid="uid://bksfq7q3s0tq7"]
+[gd_scene format=3 uid="uid://5asnhac8ad5k"]
 
 [ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/dinosaur.gd" id="1_dino"]
 [ext_resource type="Texture2D" uid="uid://d3h585pe6dvlu" path="res://Art/dinosaur.png" id="2_dino"]
+[ext_resource type="AudioStream" uid="uid://b2hwm44jm51re" path="res://Sounds/4bit_dog_bark.mp3" id="3_7m27e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dino"]
 radius = 40.0
 
-[node name="Dinosaur" type="StaticBody2D" unique_id=2032882781 node_paths=PackedStringArray("circle", "sprite", "collider")]
+[node name="Dinosaur" type="StaticBody2D" unique_id=2032882781 node_paths=PackedStringArray("circle", "sprite", "collider", "sound")]
 script = ExtResource("1_dino")
 circle = NodePath("Polygon2D")
 sprite = NodePath("Sprite2D")
 collider = NodePath("Area2D")
+sound = NodePath("AudioStreamPlayer2D")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1828699720]
 
@@ -26,5 +28,8 @@ polygon = PackedVector2Array(40, 0, 36.96, 15.31, 28.28, 28.28, 15.31, 36.96, 0,
 visible = false
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_dino")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1778774568]
+stream = ExtResource("3_7m27e")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
