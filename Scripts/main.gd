@@ -6,6 +6,7 @@ extends Node
 @export var dinosaur: StaticBody2D
 @export var timer_time: float
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timer.start(timer_time)
