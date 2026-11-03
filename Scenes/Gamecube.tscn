@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bykxk5bbuoxi3"]
+
+[ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_eawwf"]
+[ext_resource type="Texture2D" uid="uid://dtvblmw68k4pi" path="res://assets/gamecube.png" id="1_rmcef"]
+[ext_resource type="AudioStream" uid="uid://dl385ee85jgqt" path="res://Sounds/wonka.mp3" id="3_nbypx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2veju"]
+size = Vector2(364, 258)
+
+[node name="Gamecube" type="RigidBody2D" unique_id=913389517 node_paths=PackedStringArray("sprite", "sound")]
+script = ExtResource("1_eawwf")
+sprite = NodePath("Sprite2D")
+sound = NodePath("AudioStreamPlayer2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1878071219]
+texture = ExtResource("1_rmcef")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1673489726]
+stream = ExtResource("3_nbypx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1103288926]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1602054198]
+position = Vector2(3, 40)
+shape = SubResource("RectangleShape2D_2veju")
