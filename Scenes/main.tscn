@@ -3,10 +3,13 @@
 [ext_resource type="Script" uid="uid://bhrlawj6voojl" path="res://Scripts/main.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://c2bdbigythsv5" path="res://Scenes/Bedroom.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://ckt7f87cohttr" path="res://Scenes/Player.tscn" id="2_8gbba"]
-[ext_resource type="PackedScene" uid="uid://5asnhac8ad5k" path="res://Scenes/Dinosaur.tscn" id="2_21xkr"]
+[ext_resource type="PackedScene" uid="uid://bksfq7q3s0tq7" path="res://Scenes/Dinosaur.tscn" id="2_21xkr"]
 [ext_resource type="PackedScene" uid="uid://dhhiheyqfp5af" path="res://Scenes/User_Interface.tscn" id="4_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://bgf7qqv4bdb2y" path="res://Art/cage.png" id="5_kry3j"]
 [ext_resource type="Texture2D" uid="uid://ba1t7hx8ehchv" path="res://assets/SmokeFX Lite SpriteSheet 4A-1.png" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://bykxk5bbuoxi3" path="res://Scenes/Gamecube.tscn" id="8_344ge"]
+[ext_resource type="PackedScene" uid="uid://dottr5trr0vga" path="res://Scenes/Lamp.tscn" id="9_ynf5e"]
+[ext_resource type="AudioStream" uid="uid://bnjpxwsurxffq" path="res://Sounds/finish.mp3" id="10_hptm8"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tefeu"]
 particles_animation = true
@@ -21,16 +24,22 @@ anim_speed_max = 1.0
 anim_offset_min = 0.26389998
 anim_offset_max = 0.5257
 
-[node name="Node2D" type="Node2D" unique_id=1725296416 node_paths=PackedStringArray("timer", "player", "popup", "dinosaur")]
+[node name="Bedroom" type="Node2D" unique_id=1725296416 node_paths=PackedStringArray("timer", "player", "popup")]
 script = ExtResource("1_8gbba")
 timer = NodePath("Timer")
 player = NodePath("Player")
 popup = NodePath("UserInterface")
-dinosaur = NodePath("Dinosaur")
 timer_time = 10.0
+
+[node name="Gamecube" parent="." unique_id=2032882781 instance=ExtResource("8_344ge")]
+position = Vector2(1385, 185)
+scale = Vector2(0.5, 0.5)
 
 [node name="Dinosaur" parent="." unique_id=1461343610 instance=ExtResource("2_21xkr")]
 position = Vector2(990, 275)
+
+[node name="Lamp" parent="." unique_id=437428586 instance=ExtResource("9_ynf5e")]
+position = Vector2(1349, 479)
 
 [node name="Table" type="Polygon2D" parent="." unique_id=642791655]
 position = Vector2(1180.0001, 124)
@@ -38,7 +47,7 @@ scale = Vector2(0.13722397, 0.16216215)
 color = Color(0.4509804, 0.18431373, 0.003921569, 0.47058824)
 polygon = PackedVector2Array(7.286133, -6.166626, -2565.15, 6.166687, -2587.0117, 604.3334, 21.861328, 548.8334)
 
-[node name="Bedroom" parent="." unique_id=1013182243 instance=ExtResource("1_bo1nx")]
+[node name="Walls" parent="." unique_id=1013182243 instance=ExtResource("1_bo1nx")]
 
 [node name="Player" parent="." unique_id=373225993 instance=ExtResource("2_8gbba")]
 z_index = 1
@@ -64,5 +73,8 @@ material = SubResource("CanvasItemMaterial_tefeu")
 position = Vector2(520, 503)
 texture = ExtResource("7_o6xl0")
 process_material = SubResource("ParticleProcessMaterial_3iv66")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2026848716]
+stream = ExtResource("10_hptm8")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

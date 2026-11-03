@@ -3,8 +3,8 @@ extends Node
 @export var timer: Timer
 @export var player: CharacterBody2D
 @export var popup: Window
-@export var dinosaur: StaticBody2D
 @export var timer_time: float
+@export var finish_sound: AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,3 +23,4 @@ func _on_timer_timeout() -> void:
 	player.velocity = Vector2(0, 0)
 	player.player_locked = true
 	popup.show()
+	finish_sound.play()
