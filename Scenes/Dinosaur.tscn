@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://5asnhac8ad5k"]
+[gd_scene format=3 uid="uid://bksfq7q3s0tq7"]
 
 [ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_dino"]
 [ext_resource type="Texture2D" uid="uid://d3h585pe6dvlu" path="res://Art/dinosaur.png" id="2_dino"]
