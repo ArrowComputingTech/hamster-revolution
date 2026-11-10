@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://p66vk2r14u34"]
+
+[ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_7qnn8"]
+[ext_resource type="Texture2D" uid="uid://dv4nngwvho34n" path="res://assets/bicycle.png" id="2_7qnn8"]
+[ext_resource type="AudioStream" uid="uid://drymiyvx0oa50" path="res://Sounds/alert.mp3" id="3_7qnn8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7m27e"]
+radius = 20.600964
+height = 93.99999
+
+[node name="Bike" type="StaticBody2D" unique_id=2032882781 node_paths=PackedStringArray("sprite", "sound")]
+script = ExtResource("1_7qnn8")
+sprite = NodePath("Sprite2D")
+sound = NodePath("AudioStreamPlayer2D")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1828699720]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=432352403]
+physics_interpolation_mode = 2
+position = Vector2(-1, 22)
+rotation = 1.5603243
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_7m27e")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1760016679]
+position = Vector2(5, -16)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_7qnn8")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1778774568]
+stream = ExtResource("3_7qnn8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

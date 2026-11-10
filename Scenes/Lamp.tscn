@@ -5,6 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://6wqo8edsmasg" path="res://Sounds/jingle_jangle.mp3" id="3_i7rju"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7m27e"]
+radius = 20.8
+height = 45.199997
 
 [node name="Lamp" type="StaticBody2D" unique_id=2032882781 node_paths=PackedStringArray("sprite", "sound")]
 script = ExtResource("1_1i64f")

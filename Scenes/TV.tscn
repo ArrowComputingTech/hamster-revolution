@@ -4,7 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bi0flvgv688it" path="res://assets/Television.png" id="2_fol4t"]
 [ext_resource type="AudioStream" uid="uid://cad7dl27waj2e" path="res://Sounds/thunk.mp3" id="3_waymy"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7m27e"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qnn8"]
+size = Vector2(46.6, 35.199997)
 
 [node name="TV" type="StaticBody2D" unique_id=2032882781 node_paths=PackedStringArray("sprite", "sound")]
 script = ExtResource("1_fol4t")
@@ -15,8 +16,9 @@ sound = NodePath("AudioStreamPlayer2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=432352403]
 physics_interpolation_mode = 2
+position = Vector2(4.500003, 4.000002)
 scale = Vector2(5, 5)
-shape = SubResource("CapsuleShape2D_7m27e")
+shape = SubResource("RectangleShape2D_7qnn8")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1760016679]
 scale = Vector2(0.6, 0.6)

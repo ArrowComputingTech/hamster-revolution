@@ -4,13 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://c2bdbigythsv5" path="res://Scenes/Bedroom.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://ckt7f87cohttr" path="res://Scenes/Player.tscn" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://bksfq7q3s0tq7" path="res://Scenes/Dinosaur.tscn" id="2_21xkr"]
+[ext_resource type="AudioStream" uid="uid://cg4uh68mwi3a8" path="res://Sounds/grow_a_thick_beard.mp3" id="4_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://dhhiheyqfp5af" path="res://Scenes/User_Interface.tscn" id="4_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://bgf7qqv4bdb2y" path="res://Art/cage.png" id="5_kry3j"]
 [ext_resource type="Texture2D" uid="uid://ba1t7hx8ehchv" path="res://assets/SmokeFX Lite SpriteSheet 4A-1.png" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bykxk5bbuoxi3" path="res://Scenes/Gamecube.tscn" id="8_344ge"]
 [ext_resource type="PackedScene" uid="uid://dottr5trr0vga" path="res://Scenes/Lamp.tscn" id="9_ynf5e"]
 [ext_resource type="AudioStream" uid="uid://bnjpxwsurxffq" path="res://Sounds/finish.mp3" id="10_hptm8"]
-[ext_resource type="AudioStream" uid="uid://drymiyvx0oa50" path="res://Sounds/alert.mp3" id="11_d1ilt"]
+[ext_resource type="PackedScene" uid="uid://p66vk2r14u34" path="res://Scenes/Bike.tscn" id="11_bike0"]
+[ext_resource type="PackedScene" uid="uid://g7id0yads7xm" path="res://Scenes/TV.tscn" id="12_tvtv0"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tefeu"]
 particles_animation = true
@@ -44,19 +46,27 @@ ui = NodePath("UserInterface")
 stream = ExtResource("10_hptm8")
 
 [node name="Start" type="AudioStreamPlayer2D" parent="Sounds" unique_id=970067751]
-stream = ExtResource("11_d1ilt")
+stream = ExtResource("4_d1ilt")
+volume_db = -5.943
 
 [node name="Objects" type="Node2D" parent="." unique_id=2082005233]
 
 [node name="Dinosaur" parent="Objects" unique_id=1461343610 instance=ExtResource("2_21xkr")]
-position = Vector2(990, 275)
+position = Vector2(945, 846)
 
 [node name="Gamecube" parent="Objects" unique_id=2032882781 instance=ExtResource("8_344ge")]
-position = Vector2(1385, 185)
+position = Vector2(1488, 549)
 scale = Vector2(0.5, 0.5)
 
 [node name="Lamp" parent="Objects" unique_id=437428586 instance=ExtResource("9_ynf5e")]
-position = Vector2(1349, 479)
+position = Vector2(1527, 239.00002)
+scale = Vector2(0.8, 0.8)
+
+[node name="TV" parent="Objects" unique_id=1835406127 instance=ExtResource("12_tvtv0")]
+position = Vector2(1507, 685)
+
+[node name="Bike" parent="Objects" unique_id=483539464 instance=ExtResource("11_bike0")]
+position = Vector2(405, 494)
 
 [node name="Table" type="Polygon2D" parent="." unique_id=642791655]
 position = Vector2(1180.0001, 124)
