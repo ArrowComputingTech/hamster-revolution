@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dguitr5w8n3mx"]
+
+[ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_guit"]
+[ext_resource type="Texture2D" uid="uid://dge3imufuwvsa" path="res://assets/guitar_cut.png" id="2_guit"]
+[ext_resource type="AudioStream" uid="uid://dkhoqkx3jygrx" path="res://Sounds/guitar.mp3" id="3_5drf2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_guit"]
+radius = 38.0
+height = 150.0
+
+[node name="Guitar" type="StaticBody2D" unique_id=1928410111 node_paths=PackedStringArray("sprite", "sound")]
+script = ExtResource("1_guit")
+sprite = NodePath("Sprite2D")
+sound = NodePath("AudioStreamPlayer2D")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1679692684]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1564985547]
+physics_interpolation_mode = 2
+shape = SubResource("CapsuleShape2D_guit")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=979574845]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_guit")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1954032602]
+stream = ExtResource("3_5drf2")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

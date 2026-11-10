@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://crubilaf3m7kd"]
+
+[ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_rubk"]
+[ext_resource type="Texture2D" uid="uid://dyskugw8852qj" path="res://assets/rubiks_cube_cut.png" id="2_rubk"]
+[ext_resource type="AudioStream" uid="uid://bwadwgbl8l1m3" path="res://Sounds/rubiks_cube.mp3" id="3_3rhjj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rubk"]
+size = Vector2(145, 138)
+
+[node name="RubiksCube" type="StaticBody2D" unique_id=796626990 node_paths=PackedStringArray("sprite", "sound")]
+script = ExtResource("1_rubk")
+sprite = NodePath("Sprite2D")
+sound = NodePath("AudioStreamPlayer2D")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1601596055]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=783059284]
+physics_interpolation_mode = 2
+shape = SubResource("RectangleShape2D_rubk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=875351180]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_rubk")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=220453270]
+stream = ExtResource("3_3rhjj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -13,6 +13,11 @@
 [ext_resource type="AudioStream" uid="uid://bnjpxwsurxffq" path="res://Sounds/finish.mp3" id="10_hptm8"]
 [ext_resource type="PackedScene" uid="uid://p66vk2r14u34" path="res://Scenes/Bike.tscn" id="11_bike0"]
 [ext_resource type="PackedScene" uid="uid://g7id0yads7xm" path="res://Scenes/TV.tscn" id="12_tvtv0"]
+[ext_resource type="PackedScene" uid="uid://c3batmn8xq2vp" path="res://Scenes/Batman.tscn" id="13_batm0"]
+[ext_resource type="PackedScene" uid="uid://bchair7m4k2nq" path="res://Scenes/Chair.tscn" id="14_chai0"]
+[ext_resource type="PackedScene" uid="uid://dguitr5w8n3mx" path="res://Scenes/Guitar.tscn" id="15_guit0"]
+[ext_resource type="PackedScene" uid="uid://brccar2j6p4ty" path="res://Scenes/RCCar.tscn" id="16_rcar0"]
+[ext_resource type="PackedScene" uid="uid://crubik9f3m7kd" path="res://Scenes/RubiksCube.tscn" id="17_rubk0"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tefeu"]
 particles_animation = true
@@ -67,6 +72,21 @@ position = Vector2(1507, 685)
 
 [node name="Bike" parent="Objects" unique_id=483539464 instance=ExtResource("11_bike0")]
 position = Vector2(405, 494)
+
+[node name="Batman" parent="Objects" instance=ExtResource("13_batm0")]
+position = Vector2(320, 860)
+
+[node name="Chair" parent="Objects" instance=ExtResource("14_chai0")]
+position = Vector2(720, 420)
+
+[node name="Guitar" parent="Objects" instance=ExtResource("15_guit0")]
+position = Vector2(300, 240)
+
+[node name="RCCar" parent="Objects" instance=ExtResource("16_rcar0")]
+position = Vector2(1150, 620)
+
+[node name="RubiksCube" parent="Objects" instance=ExtResource("17_rubk0")]
+position = Vector2(760, 820)
 
 [node name="Table" type="Polygon2D" parent="." unique_id=642791655]
 position = Vector2(1180.0001, 124)

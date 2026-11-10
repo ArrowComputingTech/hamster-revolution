@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://brccar2j6p4ty"]
+
+[ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_rcar"]
+[ext_resource type="Texture2D" uid="uid://b8oujxv6wxuju" path="res://assets/rc_car_cut.png" id="2_rcar"]
+[ext_resource type="AudioStream" uid="uid://doa2ejubhm57h" path="res://Sounds/rccar.mp3" id="3_v27s1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rcar"]
+size = Vector2(150, 80)
+
+[node name="RCCar" type="StaticBody2D" unique_id=1537149302 node_paths=PackedStringArray("sprite", "sound")]
+script = ExtResource("1_rcar")
+sprite = NodePath("Sprite2D")
+sound = NodePath("AudioStreamPlayer2D")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1842403077]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1473474119]
+physics_interpolation_mode = 2
+shape = SubResource("RectangleShape2D_rcar")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1593362672]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_rcar")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2047994999]
+stream = ExtResource("3_v27s1")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
