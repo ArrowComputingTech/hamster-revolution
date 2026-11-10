@@ -93,10 +93,4 @@ position = Vector2(1105, 169.00002)
 scale = Vector2(0.13722397, 0.16216215)
 texture = ExtResource("5_kry3j")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=384568980]
-material = SubResource("CanvasItemMaterial_tefeu")
-position = Vector2(520, 503)
-texture = ExtResource("7_o6xl0")
-process_material = SubResource("ParticleProcessMaterial_3iv66")
-
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
