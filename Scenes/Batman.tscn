@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_batm"]
 [ext_resource type="Texture2D" uid="uid://cyt1m511m73ue" path="res://assets/batman_cut.png" id="2_batm"]
 [ext_resource type="AudioStream" uid="uid://cto2y26r41tfk" path="res://Sounds/batman.mp3" id="3_6judw"]
+[ext_resource type="Texture2D" path="res://assets/batman_broken.png" id="4_broken"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_batm"]
 radius = 60.0
@@ -12,6 +13,7 @@ height = 150.0
 script = ExtResource("1_batm")
 sprite = NodePath("Sprite2D")
 sound = NodePath("AudioStreamPlayer2D")
+broken_texture = ExtResource("4_broken")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1109561934]
 

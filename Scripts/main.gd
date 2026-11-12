@@ -8,9 +8,9 @@ extends Node
 @export var a_start: AudioStreamPlayer2D
 @export var objects: Node2D
 @export var ui: Window
+@export var camera: Camera2D
 
 var points: int = 0
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,6 +24,7 @@ func _ready() -> void:
 
 func _on_object_knocked_over() -> void:
 	points += 1
+	camera.violently_shake()
 
 func _on_new_game_button_pressed() -> void:
 	get_tree().reload_current_scene()

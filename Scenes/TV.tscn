@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_fol4t"]
 [ext_resource type="Texture2D" uid="uid://bi0flvgv688it" path="res://assets/Television.png" id="2_fol4t"]
 [ext_resource type="AudioStream" uid="uid://cecnumbjcgrwa" path="res://Sounds/tv.mp3" id="3_fol4t"]
+[ext_resource type="Texture2D" path="res://assets/Television_broken.png" id="4_broken"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qnn8"]
 size = Vector2(46.6, 35.199997)
@@ -11,6 +12,7 @@ size = Vector2(46.6, 35.199997)
 script = ExtResource("1_fol4t")
 sprite = NodePath("Sprite2D")
 sound = NodePath("AudioStreamPlayer2D")
+broken_texture = ExtResource("4_broken")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1828699720]
 

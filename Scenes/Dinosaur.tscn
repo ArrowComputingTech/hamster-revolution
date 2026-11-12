@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_dino"]
 [ext_resource type="Texture2D" uid="uid://d3h585pe6dvlu" path="res://assets/dinosaur.png" id="2_dino"]
-[ext_resource type="AudioStream" uid="uid://b2hwm44jm51re" path="res://Sounds/4bit_dog_bark.mp3" id="3_7m27e"]
+[ext_resource type="AudioStream" uid="uid://rbm48tvxt72v" path="res://Sounds/4bit_dog_bark.mp3" id="3_7m27e"]
+[ext_resource type="Texture2D" uid="uid://b4aep2uw1fh21" path="res://assets/dinosaur_broken.png" id="4_broken"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7m27e"]
 
@@ -10,6 +11,7 @@
 script = ExtResource("1_dino")
 sprite = NodePath("Sprite2D")
 sound = NodePath("AudioStreamPlayer2D")
+broken_texture = ExtResource("4_broken")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1828699720]
 

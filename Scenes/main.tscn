@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://c2bdbigythsv5" path="res://Scenes/Bedroom.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://ckt7f87cohttr" path="res://Scenes/Player.tscn" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://bksfq7q3s0tq7" path="res://Scenes/Dinosaur.tscn" id="2_21xkr"]
+[ext_resource type="PackedScene" uid="uid://cnqoaqdj1lpy5" path="res://Scenes/ShakeCamera.tscn" id="2_b3802"]
 [ext_resource type="AudioStream" uid="uid://cg4uh68mwi3a8" path="res://Sounds/grow_a_thick_beard.mp3" id="4_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://dhhiheyqfp5af" path="res://Scenes/User_Interface.tscn" id="4_jjvhh"]
 [ext_resource type="Texture2D" uid="uid://bgf7qqv4bdb2y" path="res://Art/cage.png" id="5_kry3j"]
-[ext_resource type="Texture2D" uid="uid://ba1t7hx8ehchv" path="res://assets/SmokeFX Lite SpriteSheet 4A-1.png" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bykxk5bbuoxi3" path="res://Scenes/Gamecube.tscn" id="8_344ge"]
 [ext_resource type="PackedScene" uid="uid://dottr5trr0vga" path="res://Scenes/Lamp.tscn" id="9_ynf5e"]
 [ext_resource type="AudioStream" uid="uid://bnjpxwsurxffq" path="res://Sounds/finish.mp3" id="10_hptm8"]
@@ -17,22 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://bchair7m4k2nq" path="res://Scenes/Chair.tscn" id="14_chai0"]
 [ext_resource type="PackedScene" uid="uid://dguitr5w8n3mx" path="res://Scenes/Guitar.tscn" id="15_guit0"]
 [ext_resource type="PackedScene" uid="uid://brccar2j6p4ty" path="res://Scenes/RCCar.tscn" id="16_rcar0"]
-[ext_resource type="PackedScene" uid="uid://crubik9f3m7kd" path="res://Scenes/RubiksCube.tscn" id="17_rubk0"]
+[ext_resource type="PackedScene" uid="uid://crubilaf3m7kd" path="res://Scenes/RubiksCube.tscn" id="17_rubk0"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tefeu"]
-particles_animation = true
-particles_anim_h_frames = 16
-particles_anim_v_frames = 1
-particles_anim_loop = false
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3iv66"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 98, 0)
-anim_speed_max = 1.0
-anim_offset_min = 0.26389998
-anim_offset_max = 0.5257
-
-[node name="Main" type="Node2D" unique_id=1725296416 node_paths=PackedStringArray("timer", "player", "popup", "a_finish", "a_start", "objects", "ui")]
+[node name="Main" type="Node2D" unique_id=1725296416 node_paths=PackedStringArray("timer", "player", "popup", "a_finish", "a_start", "objects", "ui", "camera")]
 script = ExtResource("1_8gbba")
 timer = NodePath("Timer")
 player = NodePath("Player")
@@ -42,6 +29,10 @@ a_finish = NodePath("Sounds/Finish")
 a_start = NodePath("Sounds/Start")
 objects = NodePath("Objects")
 ui = NodePath("UserInterface")
+camera = NodePath("ShakeCamera")
+
+[node name="ShakeCamera" parent="." unique_id=226284632 instance=ExtResource("2_b3802")]
+position = Vector2(960, 540)
 
 [node name="Walls" parent="." unique_id=1013182243 instance=ExtResource("1_bo1nx")]
 
@@ -73,19 +64,19 @@ position = Vector2(1507, 685)
 [node name="Bike" parent="Objects" unique_id=483539464 instance=ExtResource("11_bike0")]
 position = Vector2(405, 494)
 
-[node name="Batman" parent="Objects" instance=ExtResource("13_batm0")]
+[node name="Batman" parent="Objects" unique_id=1346101859 instance=ExtResource("13_batm0")]
 position = Vector2(320, 860)
 
-[node name="Chair" parent="Objects" instance=ExtResource("14_chai0")]
+[node name="Chair" parent="Objects" unique_id=2124923236 instance=ExtResource("14_chai0")]
 position = Vector2(720, 420)
 
-[node name="Guitar" parent="Objects" instance=ExtResource("15_guit0")]
+[node name="Guitar" parent="Objects" unique_id=565278826 instance=ExtResource("15_guit0")]
 position = Vector2(300, 240)
 
-[node name="RCCar" parent="Objects" instance=ExtResource("16_rcar0")]
+[node name="RCCar" parent="Objects" unique_id=2021613571 instance=ExtResource("16_rcar0")]
 position = Vector2(1150, 620)
 
-[node name="RubiksCube" parent="Objects" instance=ExtResource("17_rubk0")]
+[node name="RubiksCube" parent="Objects" unique_id=295531735 instance=ExtResource("17_rubk0")]
 position = Vector2(760, 820)
 
 [node name="Table" type="Polygon2D" parent="." unique_id=642791655]

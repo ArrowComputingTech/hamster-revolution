@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5k68pinxmoyu"
-path="res://.godot/imported/dinosaur_cut.png-4952e9e16236947b806c446de7511ce1.ctex"
+uid="uid://cbuudtib3uhpw"
+path="res://.godot/imported/chair_broken.png-b5cfb9a55c5b4700857b3a4fdbb2b9a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dinosaur_cut.png"
-dest_files=["res://.godot/imported/dinosaur_cut.png-4952e9e16236947b806c446de7511ce1.ctex"]
+source_file="res://assets/chair_broken.png"
+dest_files=["res://.godot/imported/chair_broken.png-b5cfb9a55c5b4700857b3a4fdbb2b9a3.ctex"]
 
 [params]
 

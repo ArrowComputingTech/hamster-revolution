@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_1i64f"]
 [ext_resource type="Texture2D" uid="uid://l2px4lohxup8" path="res://assets/lamp.png" id="2_1i64f"]
 [ext_resource type="AudioStream" uid="uid://6wqo8edsmasg" path="res://Sounds/jingle_jangle.mp3" id="3_i7rju"]
+[ext_resource type="Texture2D" path="res://assets/lamp_broken.png" id="4_broken"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7m27e"]
 radius = 20.8
@@ -12,6 +13,7 @@ height = 45.199997
 script = ExtResource("1_1i64f")
 sprite = NodePath("Sprite2D")
 sound = NodePath("AudioStreamPlayer2D")
+broken_texture = ExtResource("4_broken")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1828699720]
 

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_guit"]
 [ext_resource type="Texture2D" uid="uid://dge3imufuwvsa" path="res://assets/guitar_cut.png" id="2_guit"]
 [ext_resource type="AudioStream" uid="uid://dkhoqkx3jygrx" path="res://Sounds/guitar.mp3" id="3_5drf2"]
+[ext_resource type="Texture2D" path="res://assets/guitar_broken.png" id="4_broken"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_guit"]
 radius = 38.0
@@ -12,6 +13,7 @@ height = 150.0
 script = ExtResource("1_guit")
 sprite = NodePath("Sprite2D")
 sound = NodePath("AudioStreamPlayer2D")
+broken_texture = ExtResource("4_broken")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1679692684]
 

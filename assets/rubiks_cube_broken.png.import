@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6428ryoq8is8"
-path="res://.godot/imported/rubiks_cube.png-a82acc2579108b872e116c7d7e0a5d2e.ctex"
+uid="uid://bbf3nv3m0cgoa"
+path="res://.godot/imported/rubiks_cube_broken.png-a1347a35e46c3909bebdd4691469042a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rubiks_cube.png"
-dest_files=["res://.godot/imported/rubiks_cube.png-a82acc2579108b872e116c7d7e0a5d2e.ctex"]
+source_file="res://assets/rubiks_cube_broken.png"
+dest_files=["res://.godot/imported/rubiks_cube_broken.png-a1347a35e46c3909bebdd4691469042a.ctex"]
 
 [params]
 

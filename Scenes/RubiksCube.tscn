@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_rubk"]
 [ext_resource type="Texture2D" uid="uid://dyskugw8852qj" path="res://assets/rubiks_cube_cut.png" id="2_rubk"]
 [ext_resource type="AudioStream" uid="uid://bwadwgbl8l1m3" path="res://Sounds/rubiks_cube.mp3" id="3_3rhjj"]
+[ext_resource type="Texture2D" path="res://assets/rubiks_cube_broken.png" id="4_broken"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rubk"]
 size = Vector2(145, 138)
@@ -11,6 +12,7 @@ size = Vector2(145, 138)
 script = ExtResource("1_rubk")
 sprite = NodePath("Sprite2D")
 sound = NodePath("AudioStreamPlayer2D")
+broken_texture = ExtResource("4_broken")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1601596055]
 

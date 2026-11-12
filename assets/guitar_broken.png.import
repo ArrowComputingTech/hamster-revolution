@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btw8fcen8tje"
-path="res://.godot/imported/chair_cut.png-4d90d62c7a347f41a48b4ec282470f3c.ctex"
+uid="uid://0w64el812p70"
+path="res://.godot/imported/guitar_broken.png-35cc7020663b79c98663350d10429ef9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/chair_cut.png"
-dest_files=["res://.godot/imported/chair_cut.png-4d90d62c7a347f41a48b4ec282470f3c.ctex"]
+source_file="res://assets/guitar_broken.png"
+dest_files=["res://.godot/imported/guitar_broken.png-35cc7020663b79c98663350d10429ef9.ctex"]
 
 [params]
 

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_rcar"]
 [ext_resource type="Texture2D" uid="uid://b8oujxv6wxuju" path="res://assets/rc_car_cut.png" id="2_rcar"]
 [ext_resource type="AudioStream" uid="uid://doa2ejubhm57h" path="res://Sounds/rccar.mp3" id="3_v27s1"]
+[ext_resource type="Texture2D" path="res://assets/rc_car_broken.png" id="4_broken"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rcar"]
 size = Vector2(150, 80)
@@ -11,6 +12,7 @@ size = Vector2(150, 80)
 script = ExtResource("1_rcar")
 sprite = NodePath("Sprite2D")
 sound = NodePath("AudioStreamPlayer2D")
+broken_texture = ExtResource("4_broken")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1842403077]
 

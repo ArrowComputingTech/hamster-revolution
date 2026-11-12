@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2hpgbttic644"
-path="res://.godot/imported/dinosaur.jpg-157e87dde7f6684241a9f2bccdd7fb8b.ctex"
+uid="uid://1l5c8mijoie4"
+path="res://.godot/imported/gamecube_broken.png-f0e3bfb63aedb75ea19c3bd22702777e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dinosaur.jpg"
-dest_files=["res://.godot/imported/dinosaur.jpg-157e87dde7f6684241a9f2bccdd7fb8b.ctex"]
+source_file="res://assets/gamecube_broken.png"
+dest_files=["res://.godot/imported/gamecube_broken.png-f0e3bfb63aedb75ea19c3bd22702777e.ctex"]
 
 [params]
 

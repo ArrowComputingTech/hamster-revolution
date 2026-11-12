@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bchair7m4k2nq"]
 
 [ext_resource type="Script" uid="uid://uddryx7sgf2r" path="res://Scripts/objects.gd" id="1_chai"]
-[ext_resource type="Texture2D" uid="uid://btw8fcen8tje" path="res://assets/chair_cut.png" id="2_chai"]
+[ext_resource type="Texture2D" uid="uid://bu2h8hfboo20e" path="res://assets/chair.png" id="2_gbj34"]
 [ext_resource type="AudioStream" uid="uid://cjve4o46hch85" path="res://Sounds/chair.mp3" id="3_gbj34"]
+[ext_resource type="Texture2D" path="res://assets/chair_broken.png" id="4_broken"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_chai"]
 size = Vector2(125, 145)
@@ -11,6 +12,7 @@ size = Vector2(125, 145)
 script = ExtResource("1_chai")
 sprite = NodePath("Sprite2D")
 sound = NodePath("AudioStreamPlayer2D")
+broken_texture = ExtResource("4_broken")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1649035884]
 
@@ -20,7 +22,7 @@ shape = SubResource("RectangleShape2D_chai")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1103044375]
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_chai")
+texture = ExtResource("2_gbj34")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1605428120]
 stream = ExtResource("3_gbj34")

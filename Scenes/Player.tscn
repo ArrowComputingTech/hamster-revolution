@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ckt7f87cohttr"]
 
-[ext_resource type="Script" uid="uid://u6twdj1cu58l" path="res://scripts/player.gd" id="1_rpqav"]
+[ext_resource type="Script" uid="uid://u6twdj1cu58l" path="res://Scripts/Player.gd" id="1_rpqav"]
 [ext_resource type="Texture2D" uid="uid://x65g6g6uxjcb" path="res://assets/hamster_ball_spritesheet_4x.png" id="3_3li8b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3iv66"]
