@@ -8,6 +8,7 @@ extends Node
 @export var a_start: AudioStreamPlayer2D
 @export var objects: Node2D
 @export var ui: Window
+@export var particles: GPUParticles2D
 @export var camera: Camera2D
 
 var points: int = 0
@@ -24,6 +25,7 @@ func _ready() -> void:
 
 func _on_object_knocked_over() -> void:
 	points += 1
+	particles.emitting = true
 	camera.violently_shake()
 
 func _on_new_game_button_pressed() -> void:

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ba1t7hx8ehchv" path="res://assets/SmokeFX Lite SpriteSheet 4A-1.png" id="1_o5nyq"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ikjo7"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6lmj6"]
 particles_animation = true
 particles_anim_h_frames = 16
 particles_anim_v_frames = 1
@@ -11,11 +11,15 @@ particles_anim_loop = false
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3iv66"]
 particle_flag_disable_z = true
 gravity = Vector3(0, 98, 0)
+anim_speed_min = 1.0
+anim_speed_max = 1.0
 
-[node name="GPUParticles2D" type="GPUParticles2D" unique_id=1995555608]
-material = SubResource("CanvasItemMaterial_ikjo7")
+[node name="GPUParticles2D" type="GPUParticles2D" unique_id=521592596]
+material = SubResource("CanvasItemMaterial_6lmj6")
 emitting = false
+amount = 1
 texture = ExtResource("1_o5nyq")
+lifetime = 0.6
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_3iv66")

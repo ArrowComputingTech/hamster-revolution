@@ -10,9 +10,7 @@ var fallen: bool = false
 const PARTICLE_SCENE = preload("res://Scenes/Particle_objectfall.tscn")
 
 func _ready() -> void:
-	sprite.hide()
 	sprite.show()
-	var fallen := false
 
 func fall_over() -> void:
 	if fallen:
@@ -24,15 +22,20 @@ func fall_over() -> void:
 		sprite.texture = broken_texture
 	else:
 		sprite.hide()
+	_spawn_particles()  
 	knocked_over.emit()
+
+
+func _spawn_particles() -> void:
+	var effect = PARTICLE_SCENE.instantiate()
+	get_parent().add_child(effect)
+	effect.global_position = global_position
+	effect.emitting = true
+	effect.finished.connect(effect.queue_free)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("hit: " + body.name)
-	
-	if body.name == "Player": #check player is the body
+	if body.name == "Player": # check player is the body
 		if fallen:
 			return
-		var effect = PARTICLE_SCENE.instantiate()
-		effect.global_position = global_position
-		add_child(effect)
 		fall_over()
