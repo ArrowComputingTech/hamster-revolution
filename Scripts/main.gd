@@ -8,6 +8,7 @@ extends Node
 @export var a_start: AudioStreamPlayer2D
 @export var objects: Node2D
 @export var ui: Window
+@export var particles: GPUParticles2D
 
 var points: int = 0
 
@@ -23,7 +24,11 @@ func _ready() -> void:
 	a_start.play()
 
 func _on_object_knocked_over() -> void:
+	#particles.emitting = true
 	points += 1
+#	$GPUParticles2D.restart()
+	particles.emitting = true
+	
 
 func _on_new_game_button_pressed() -> void:
 	get_tree().reload_current_scene()
