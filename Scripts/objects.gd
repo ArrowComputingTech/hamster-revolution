@@ -25,7 +25,7 @@ func fall_over() -> void:
 	_spawn_particles()  
 	knocked_over.emit()
 
-# NEW: spawns the particle scene at this object's position
+
 func _spawn_particles() -> void:
 	var effect = PARTICLE_SCENE.instantiate()
 	get_parent().add_child(effect)
