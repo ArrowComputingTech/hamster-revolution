@@ -7,21 +7,10 @@ signal knocked_over
 @export var broken_texture: Texture2D
 var fallen: bool = false
 
-<<<<<<< HEAD
-
-func _ready() -> void:
-	sprite.show()
-	
-var fallen := false
-
-=======
 const PARTICLE_SCENE = preload("res://Scenes/Particle_objectfall.tscn")
 
 func _ready() -> void:
-	sprite.hide()
 	sprite.show()
-	var fallen := false
->>>>>>> bbd64d55691eb0203ec0d76f8d3726232f1e4c69
 
 func fall_over() -> void:
 	if fallen:
@@ -33,19 +22,20 @@ func fall_over() -> void:
 		sprite.texture = broken_texture
 	else:
 		sprite.hide()
+	_spawn_particles()  
 	knocked_over.emit()
+
+# NEW: spawns the particle scene at this object's position
+func _spawn_particles() -> void:
+	var effect = PARTICLE_SCENE.instantiate()
+	get_parent().add_child(effect)
+	effect.global_position = global_position
+	effect.emitting = true
+	effect.finished.connect(effect.queue_free)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("hit: " + body.name)
-<<<<<<< HEAD
-	fall_over()
-=======
-	
-	if body.name == "Player": #check player is the body
+	if body.name == "Player": # check player is the body
 		if fallen:
 			return
-		var effect = PARTICLE_SCENE.instantiate()
-		effect.global_position = global_position
-		add_child(effect)
 		fall_over()
->>>>>>> bbd64d55691eb0203ec0d76f8d3726232f1e4c69
